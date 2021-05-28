@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int num1, num2 ;
+	printf("ENTER FIRST NUMBER =  ");
+	scanf("%d", &num1);
+	printf("ENTER SECOND NUMBER =  ");
+	scanf("%d", &num2);
+	printf("LCM =  %d", lcm (num1,num2));
+	
+}
+
+int lcm(int a,int b)
+
+{
+	static int m=0;
+	m=m+b;
+	if(m%a == 0 && m%b == 0)
+	      
+	      return m;
+	else 
+	return lcm(a,b);
+}
